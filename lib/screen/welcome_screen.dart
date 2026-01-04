@@ -1,7 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bookstor_1/screen/login_screen.dart';
 import 'package:flutter_bookstor_1/theme/theme_colors.dart';
 import 'package:flutter_bookstor_1/widget/cusstem_bottem.dart';
+import 'package:flutter_bookstor_1/widget/cusstem_bottem2.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -18,23 +20,34 @@ class WelcomeScreen extends StatelessWidget {
             ).image,
           ),
         ),
-        child: Column(
-          children: [
-            Image.asset("asset/logo 2.png"),
+        child: SafeArea(
+          child: Column(
+            children: [
+              SizedBox(height: 60),
+              Image.asset("asset/logo 2.png"),
 
-            Text(
-              "Order Your Book Now!",
-              style: TextStyle(
-                color: ThemeColors.darkColor,
-                fontSize: 20,
-                fontWeight: FontWeight.w400,
+              Text(
+                "Order Your Book Now!",
+                style: TextStyle(
+                  color: ThemeColors.darkColor,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
-            ),
-            SizedBox(height: 200),
-            CusstemBottem(),
-            SizedBox(height: 15),
-            CusstemBottem(),
-          ],
+              SizedBox(height: 300),
+              CusstemBottem(
+                titil: "Login",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
+              ),
+              SizedBox(height: 15),
+              CusstemBottem2(titil: "Register"),
+            ],
+          ),
         ),
       ),
     );
