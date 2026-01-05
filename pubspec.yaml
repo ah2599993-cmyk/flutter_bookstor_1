@@ -36,6 +36,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   animated_splash_screen: ^1.3.0
   lottie: ^3.3.2
+  smooth_page_indicator: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -64,7 +65,10 @@ flutter:
      - asset/c133ce1a81ff5d4f839063aed5c3705ca8c0781c.jpg
      - asset/f4cb268363cb269d403493c53218de86792f7d01.png
      - asset/logo 2.png
-
+     - asset/Study discussion.json
+     - asset/Screenshot 2025-09-18 161831.png
+     - asset/Screenshot 2025-09-18 161848.png
+     - asset/Screenshot 2025-09-18 161916.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

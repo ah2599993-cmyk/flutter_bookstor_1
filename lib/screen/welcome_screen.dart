@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bookstor_1/screen/login_screen.dart';
+import 'package:flutter_bookstor_1/screen/register_screen.dart';
 import 'package:flutter_bookstor_1/theme/theme_colors.dart';
 import 'package:flutter_bookstor_1/widget/cusstem_bottem.dart';
 import 'package:flutter_bookstor_1/widget/cusstem_bottem2.dart';
@@ -45,7 +46,15 @@ class WelcomeScreen extends StatelessWidget {
                 },
               ),
               SizedBox(height: 15),
-              CusstemBottem2(titil: "Register"),
+              CusstemBottem2(
+                titil: "Register",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegisterScreen()),
+                  );
+                },
+              ),
             ],
           ),
         ),
